@@ -47,4 +47,8 @@ extension UIView {
         
         return allHierarchySubviews
     }
+    
+    func addSubviews(_ views: UIView...) {
+        views.forEach({ addSubview($0) })
+    }
 }

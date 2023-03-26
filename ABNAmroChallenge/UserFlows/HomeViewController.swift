@@ -9,23 +9,30 @@ import UIKit
 
 protocol HomeViewProtocol: BaseViewProtocol {
     func displayLocations(_ locationsViewModel: LocationsViewModel)
+    func setupCustomLocationSelector(with viewModel: CustomLocationSelectorViewModel)
 }
 
 class HomeViewController: BaseView {
     private struct Constraints {
+        static let LeadingMargin: CGFloat = 16
         static let TopMargin: CGFloat = 8
-        static let SideMargin: CGFloat = 8
-        static let InterItemMargin: CGFloat = 4
         static let ActivityIndicatorSize: CGFloat = 80
     }
     
     private struct Constants {
-        static let GifsPerRow = 3
-        static let GifsInterSpacing: CGFloat = 4
         static let ScreenBackgroundColor: UIColor = .systemBackground
     }
     
     private let presenter: HomePresenterProtocol
+    
+    private lazy var customLocationSelectorView: CustomLocationSelectorView = {
+        let locationSelectorView = CustomLocationSelectorView()
+        
+        locationSelectorView.translatesAutoresizingMaskIntoConstraints = false
+        locationSelectorView.delegate = self
+        
+        return locationSelectorView
+    }()
     
     private lazy var locationsTableView: UITableView = {
         let tableView = UITableView()
@@ -73,12 +80,18 @@ class HomeViewController: BaseView {
         title = HomeWording.Title
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = Constants.ScreenBackgroundColor
-        view.addSubview(locationsTableView)
+        view.addSubviews(customLocationSelectorView, locationsTableView)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            locationsTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            customLocationSelectorView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Constraints.TopMargin),
+            customLocationSelectorView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constraints.LeadingMargin),
+            customLocationSelectorView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constraints.LeadingMargin)
+        ])
+        
+        NSLayoutConstraint.activate([
+            locationsTableView.topAnchor.constraint(equalTo: customLocationSelectorView.bottomAnchor, constant: Constraints.TopMargin),
             locationsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             locationsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             locationsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
@@ -87,6 +100,10 @@ class HomeViewController: BaseView {
 }
 
 extension HomeViewController: HomeViewProtocol {
+    func setupCustomLocationSelector(with viewModel: CustomLocationSelectorViewModel) {
+        customLocationSelectorView.setup(with: viewModel)
+    }
+    
     func displayLocations(_ locationsViewModel: LocationsViewModel) {
         self.locationsViewModel = locationsViewModel
         locationsTableView.reloadData()
@@ -107,6 +124,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.cellTapped(at: indexPath)
+        presenter.cellWasTapped(at: indexPath)
+    }
+}
+
+extension HomeViewController: CustomLocationSelectorViewDelegate {
+    func takeMeThereButtonWasTapped(_ customLocationSelectorView: CustomLocationSelectorView) {
+        presenter.takeMeThereButtonWasTapped(latitude: customLocationSelectorView.latitude, longitude: customLocationSelectorView.longitude)
     }
 }

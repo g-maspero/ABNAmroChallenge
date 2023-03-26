@@ -13,7 +13,7 @@ class HomeModule {
     private init() {}
     
     func assemble() -> UIViewController {
-        let homeRouter = HomeRouter()
+        let homeRouter = HomeRouter(wikipediaPlacesDeeplinkBuilder: WikipediaPlacesDeeplinkBuilder(wikipediaDeeplinkBuilder: WikipediaDeeplinkBuilder()))
         let homeInteractor = HomeInteractor(locationRepository: LocationRepository(),
                                             viewMapper: LocationsViewMapper())
         let homePresenter = HomePresenter(interactor: homeInteractor,

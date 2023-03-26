@@ -22,6 +22,7 @@ extension BasePresenterProtocol {
 protocol HomePresenterProtocol: BasePresenterProtocol {
     var view: HomeViewProtocol? { get set }
     func cellWasTapped(at indexPath: IndexPath)
+    func takeMeThereButtonWasTapped(latitude: Double?, longitude: Double?)
 }
 
 class HomePresenter {
@@ -39,6 +40,10 @@ class HomePresenter {
     
     func viewIsReady() {
         view?.showLoader()
+        view?.setupCustomLocationSelector(with: CustomLocationSelectorViewModel(title: HomeWording.CustomLocationSelectorTitle,
+                                                                                latitudePlaceholder: HomeWording.CustomLocationSelectorLatitudePlaceholder,
+                                                                                longitudePlaceholder: HomeWording.CustomLocationSelectorLongitudePlaceholder,
+                                                                                buttonTitle: HomeWording.CustomLocationSelectorButtonTitle))
         getLocations()
     }
     
@@ -62,5 +67,13 @@ extension HomePresenter: HomePresenterProtocol {
         
         let location = locationsViewModel.locations[indexPath.row]
         router.openWikipediaAppFor(latitude: location.latitude, longitude: location.longitude)
+    }
+    
+    func takeMeThereButtonWasTapped(latitude: Double?, longitude: Double?) {
+        guard let latitude = latitude, let longitude = longitude else {
+            return
+        }
+        
+        router.openWikipediaAppFor(latitude: latitude, longitude: longitude)
     }
 }

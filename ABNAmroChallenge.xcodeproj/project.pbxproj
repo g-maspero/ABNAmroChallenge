@@ -32,6 +32,8 @@
 		818CE37029D0BA03006F54C9 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE36F29D0BA03006F54C9 /* LocationCell.swift */; };
 		818CE37229D0C942006F54C9 /* WikipediaDeeplinkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE37129D0C942006F54C9 /* WikipediaDeeplinkBuilder.swift */; };
 		818CE37429D0CAF9006F54C9 /* WikipediaPlacesDeeplinkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE37329D0CAF9006F54C9 /* WikipediaPlacesDeeplinkBuilder.swift */; };
+		818CE37629D0DC66006F54C9 /* CustomLocationSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE37529D0DC66006F54C9 /* CustomLocationSelectorView.swift */; };
+		818CE37829D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE37729D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		818CE36F29D0BA03006F54C9 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		818CE37129D0C942006F54C9 /* WikipediaDeeplinkBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaDeeplinkBuilder.swift; sourceTree = "<group>"; };
 		818CE37329D0CAF9006F54C9 /* WikipediaPlacesDeeplinkBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPlacesDeeplinkBuilder.swift; sourceTree = "<group>"; };
+		818CE37529D0DC66006F54C9 /* CustomLocationSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationSelectorView.swift; sourceTree = "<group>"; };
+		818CE37729D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationSelectorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				818CE37129D0C942006F54C9 /* WikipediaDeeplinkBuilder.swift */,
 				818CE37329D0CAF9006F54C9 /* WikipediaPlacesDeeplinkBuilder.swift */,
 				818CE34C29D0A758006F54C9 /* HomeViewController.swift */,
+				818CE37529D0DC66006F54C9 /* CustomLocationSelectorView.swift */,
+				818CE37729D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift */,
 				818CE36F29D0BA03006F54C9 /* LocationCell.swift */,
 				818CE36729D0B5B3006F54C9 /* BaseView.swift */,
 				818CE36B29D0B6BC006F54C9 /* UIViewExtension.swift */,
@@ -217,9 +223,11 @@
 				818CE36C29D0B6BC006F54C9 /* UIViewExtension.swift in Sources */,
 				818CE34B29D0A74F006F54C9 /* HomeRouter.swift in Sources */,
 				818CE35329D0AA66006F54C9 /* LocationRepository.swift in Sources */,
+				818CE37829D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift in Sources */,
 				818CE34F29D0A760006F54C9 /* HomeInteractor.swift in Sources */,
 				818CE37229D0C942006F54C9 /* WikipediaDeeplinkBuilder.swift in Sources */,
 				818CE35529D0AC00006F54C9 /* LocationsViewModel.swift in Sources */,
+				818CE37629D0DC66006F54C9 /* CustomLocationSelectorView.swift in Sources */,
 				818CE36629D0B3D8006F54C9 /* LocationsViewMapper.swift in Sources */,
 				818CE36E29D0B7AF006F54C9 /* BaseRouter.swift in Sources */,
 				818CE35929D0AC82006F54C9 /* HTTPManager.swift in Sources */,

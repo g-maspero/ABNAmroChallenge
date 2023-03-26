@@ -12,4 +12,8 @@ struct HomeWording {
     static let Title = String(localized: "home_title")
     static let Latitude = String(localized: "latitude")
     static let Longitude = String(localized: "longitude")
+    static let CustomLocationSelectorTitle = String(localized: "custom_location_selector_title")
+    static let CustomLocationSelectorLatitudePlaceholder = String(localized: "custom_location_selector_latitude_placeholder")
+    static let CustomLocationSelectorLongitudePlaceholder = String(localized: "custom_location_selector_longitude_placeholder")
+    static let CustomLocationSelectorButtonTitle = String(localized: "custom_location_selector_button_title")
 }

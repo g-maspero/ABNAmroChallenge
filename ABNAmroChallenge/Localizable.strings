@@ -10,3 +10,7 @@
 "home_title" = "Locations";
 "latitude" = "Latitude";
 "longitude" = "Longitude";
+"custom_location_selector_title" = "Enter latitude and longitude:";
+"custom_location_selector_latitude_placeholder" = "Latitude";
+"custom_location_selector_longitude_placeholder" = "Longitude";
+"custom_location_selector_button_title" = "Take me there!";
