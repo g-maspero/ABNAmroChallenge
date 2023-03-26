@@ -21,13 +21,15 @@ extension BasePresenterProtocol {
 
 protocol HomePresenterProtocol: BasePresenterProtocol {
     var view: HomeViewProtocol? { get set }
+    func cellWasTapped(at indexPath: IndexPath)
 }
 
-class HomePresenter: HomePresenterProtocol {
+class HomePresenter {
     private let interactor: HomeInteractorProtocol
     private let router: HomeRouterProtocol
     
     weak var view: HomeViewProtocol?
+    private var locationsViewModel: LocationsViewModel?
     
     init(interactor: HomeInteractorProtocol,
          router: HomeRouterProtocol) {
@@ -45,10 +47,20 @@ class HomePresenter: HomePresenterProtocol {
             self?.view?.hideLoader()
             switch result {
             case .success(let locationsViewModel):
+                self?.locationsViewModel = locationsViewModel
                 self?.view?.displayLocations(locationsViewModel)
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
+    }
+}
+
+extension HomePresenter: HomePresenterProtocol {
+    func cellWasTapped(at indexPath: IndexPath) {
+        guard let locationsViewModel = locationsViewModel else { return }
+        
+        let location = locationsViewModel.locations[indexPath.row]
+        router.openWikipediaAppFor(latitude: location.latitude, longitude: location.longitude)
     }
 }
