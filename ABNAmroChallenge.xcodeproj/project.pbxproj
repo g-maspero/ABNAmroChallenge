@@ -39,6 +39,10 @@
 		818CE39829D10561006F54C9 /* DeeplinkBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE39729D10561006F54C9 /* DeeplinkBuilderTests.swift */; };
 		818CE39F29D10985006F54C9 /* WikipediaDeeplinkBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE39E29D10985006F54C9 /* WikipediaDeeplinkBuilderTests.swift */; };
 		818CE3A129D10B64006F54C9 /* WikipediaPlacesDeeplinkBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3A029D10B64006F54C9 /* WikipediaPlacesDeeplinkBuilderTests.swift */; };
+		818CE3A529D10CA7006F54C9 /* WikipediaPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3A429D10CA7006F54C9 /* WikipediaPageTests.swift */; };
+		818CE3A729D10D3D006F54C9 /* RestClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3A629D10D3D006F54C9 /* RestClientTests.swift */; };
+		818CE3A929D10D69006F54C9 /* HTTPManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3A829D10D69006F54C9 /* HTTPManagerMock.swift */; };
+		818CE3AD29D10DF5006F54C9 /* BaseRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3AC29D10DF5006F54C9 /* BaseRouterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		818CE39729D10561006F54C9 /* DeeplinkBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkBuilderTests.swift; sourceTree = "<group>"; };
 		818CE39E29D10985006F54C9 /* WikipediaDeeplinkBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaDeeplinkBuilderTests.swift; sourceTree = "<group>"; };
 		818CE3A029D10B64006F54C9 /* WikipediaPlacesDeeplinkBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPlacesDeeplinkBuilderTests.swift; sourceTree = "<group>"; };
+		818CE3A429D10CA7006F54C9 /* WikipediaPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPageTests.swift; sourceTree = "<group>"; };
+		818CE3A629D10D3D006F54C9 /* RestClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClientTests.swift; sourceTree = "<group>"; };
+		818CE3A829D10D69006F54C9 /* HTTPManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManagerMock.swift; sourceTree = "<group>"; };
+		818CE3AC29D10DF5006F54C9 /* BaseRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,7 +340,10 @@
 		818CE3A229D10C5C006F54C9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				818CE3AA29D10D78006F54C9 /* Mocks */,
 				818CE3A329D10C5F006F54C9 /* Deeplink */,
+				818CE3AB29D10D80006F54C9 /* Network */,
+				818CE3AE29D10E0E006F54C9 /* Router */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -343,8 +354,33 @@
 				818CE39729D10561006F54C9 /* DeeplinkBuilderTests.swift */,
 				818CE39E29D10985006F54C9 /* WikipediaDeeplinkBuilderTests.swift */,
 				818CE3A029D10B64006F54C9 /* WikipediaPlacesDeeplinkBuilderTests.swift */,
+				818CE3A429D10CA7006F54C9 /* WikipediaPageTests.swift */,
 			);
 			path = Deeplink;
+			sourceTree = "<group>";
+		};
+		818CE3AA29D10D78006F54C9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3A829D10D69006F54C9 /* HTTPManagerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		818CE3AB29D10D80006F54C9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3A629D10D3D006F54C9 /* RestClientTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		818CE3AE29D10E0E006F54C9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3AC29D10DF5006F54C9 /* BaseRouterTests.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,8 +522,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818CE3A729D10D3D006F54C9 /* RestClientTests.swift in Sources */,
 				818CE39F29D10985006F54C9 /* WikipediaDeeplinkBuilderTests.swift in Sources */,
+				818CE3AD29D10DF5006F54C9 /* BaseRouterTests.swift in Sources */,
 				818CE3A129D10B64006F54C9 /* WikipediaPlacesDeeplinkBuilderTests.swift in Sources */,
+				818CE3A929D10D69006F54C9 /* HTTPManagerMock.swift in Sources */,
+				818CE3A529D10CA7006F54C9 /* WikipediaPageTests.swift in Sources */,
 				818CE39829D10561006F54C9 /* DeeplinkBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
