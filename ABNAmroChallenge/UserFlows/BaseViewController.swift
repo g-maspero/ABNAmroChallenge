@@ -1,5 +1,5 @@
 //
-//  BaseView.swift
+//  BaseViewController.swift
 //  ABNAmroChallenge
 //
 //  Created by angst on 26/03/2023.
@@ -10,9 +10,10 @@ import UIKit
 protocol BaseViewProtocol: UIViewController {
     func showLoader()
     func hideLoader()
+    func presentOKAlert(title: String, message: String)
 }
 
-class BaseView: UIViewController, BaseViewProtocol {
+class BaseViewController: UIViewController, BaseViewProtocol {
     private struct Constraints {
         static let ActivityIndicatorSize: CGFloat = 80
     }
@@ -38,6 +39,12 @@ class BaseView: UIViewController, BaseViewProtocol {
     
     func hideLoader() {
         activityIndicator.stopAnimating()
+    }
+    
+    func presentOKAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: CoreWording.Ok, style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     private func setupViews() {

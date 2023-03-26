@@ -12,7 +12,7 @@ protocol HomeViewProtocol: BaseViewProtocol {
     func setupCustomLocationSelector(with viewModel: CustomLocationSelectorViewModel)
 }
 
-class HomeViewController: BaseView {
+class HomeViewController: BaseViewController {
     private struct Constraints {
         static let LeadingMargin: CGFloat = 16
         static let TopMargin: CGFloat = 8
@@ -124,6 +124,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         presenter.cellWasTapped(at: indexPath)
     }
 }

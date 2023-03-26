@@ -55,7 +55,8 @@ class HomePresenter {
                 self?.locationsViewModel = locationsViewModel
                 self?.view?.displayLocations(locationsViewModel)
             case .failure(let error):
-                print(error.localizedDescription)
+                self?.view?.presentOKAlert(title: CoreWording.GenericErrorTitle,
+                                     message: error.localizedDescription)
             }
         }
     }
@@ -71,6 +72,8 @@ extension HomePresenter: HomePresenterProtocol {
     
     func takeMeThereButtonWasTapped(latitude: Double?, longitude: Double?) {
         guard let latitude = latitude, let longitude = longitude else {
+            view?.presentOKAlert(title: CoreWording.Oops,
+                                 message: HomeWording.CoordinatesErrorTitle)
             return
         }
         

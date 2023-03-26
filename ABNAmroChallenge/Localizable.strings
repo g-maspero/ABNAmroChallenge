@@ -6,11 +6,18 @@
   
 */
 
-"unknown_location_name" = "Unknown place";
+// Core
+"core_ok" = "Ok";
+"core_oops" = "Oops";
+"core_generic_error_title" = "Oops, something went wrong!";
+
+//Home
+"home_unknown_location_name" = "Unknown place";
 "home_title" = "Locations";
-"latitude" = "Latitude";
-"longitude" = "Longitude";
-"custom_location_selector_title" = "Enter latitude and longitude:";
-"custom_location_selector_latitude_placeholder" = "Latitude";
-"custom_location_selector_longitude_placeholder" = "Longitude";
-"custom_location_selector_button_title" = "Take me there!";
+"home_latitude" = "Latitude";
+"home_longitude" = "Longitude";
+"home_custom_location_selector_title" = "Enter latitude and longitude:";
+"home_custom_location_selector_latitude_placeholder" = "Latitude";
+"home_custom_location_selector_longitude_placeholder" = "Longitude";
+"home_custom_location_selector_button_title" = "Take me there!";
+"home_coordinates_error_title" = "Some coordinates seem to be wrong.";
