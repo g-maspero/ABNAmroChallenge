@@ -36,7 +36,20 @@
 		818CE37829D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE37729D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift */; };
 		818CE37A29D0F729006F54C9 /* CoreWording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE37929D0F729006F54C9 /* CoreWording.swift */; };
 		818CE38D29D0FB99006F54C9 /* DeeplinkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE38C29D0FB99006F54C9 /* DeeplinkBuilder.swift */; };
+		818CE39829D10561006F54C9 /* DeeplinkBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE39729D10561006F54C9 /* DeeplinkBuilderTests.swift */; };
+		818CE39F29D10985006F54C9 /* WikipediaDeeplinkBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE39E29D10985006F54C9 /* WikipediaDeeplinkBuilderTests.swift */; };
+		818CE3A129D10B64006F54C9 /* WikipediaPlacesDeeplinkBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3A029D10B64006F54C9 /* WikipediaPlacesDeeplinkBuilderTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		818CE39929D10561006F54C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 818CE32829D09652006F54C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 818CE32F29D09652006F54C9;
+			remoteInfo = ABNAmroChallenge;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		818CE33029D09652006F54C9 /* ABNAmroChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABNAmroChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +82,10 @@
 		818CE37729D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationSelectorViewModel.swift; sourceTree = "<group>"; };
 		818CE37929D0F729006F54C9 /* CoreWording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreWording.swift; sourceTree = "<group>"; };
 		818CE38C29D0FB99006F54C9 /* DeeplinkBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkBuilder.swift; sourceTree = "<group>"; };
+		818CE39529D10560006F54C9 /* ABNAmroChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNAmroChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		818CE39729D10561006F54C9 /* DeeplinkBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkBuilderTests.swift; sourceTree = "<group>"; };
+		818CE39E29D10985006F54C9 /* WikipediaDeeplinkBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaDeeplinkBuilderTests.swift; sourceTree = "<group>"; };
+		818CE3A029D10B64006F54C9 /* WikipediaPlacesDeeplinkBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPlacesDeeplinkBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +97,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		818CE39229D10560006F54C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				818CE33229D09652006F54C9 /* ABNAmroChallenge */,
+				818CE39629D10561006F54C9 /* ABNAmroChallengeTests */,
 				818CE33129D09652006F54C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				818CE33029D09652006F54C9 /* ABNAmroChallenge.app */,
+				818CE39529D10560006F54C9 /* ABNAmroChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,7 +209,6 @@
 			children = (
 				818CE38E29D0FD7A006F54C9 /* Wording */,
 				818CE38B29D0F980006F54C9 /* Deeplink */,
-				818CE38A29D0F962006F54C9 /* New Group */,
 				818CE38929D0F955006F54C9 /* Router */,
 				818CE38829D0F949006F54C9 /* Error */,
 				818CE38729D0F93F006F54C9 /* Network */,
@@ -261,13 +286,6 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		818CE38A29D0F962006F54C9 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		818CE38B29D0F980006F54C9 /* Deeplink */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +321,32 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		818CE39629D10561006F54C9 /* ABNAmroChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3A229D10C5C006F54C9 /* Core */,
+			);
+			path = ABNAmroChallengeTests;
+			sourceTree = "<group>";
+		};
+		818CE3A229D10C5C006F54C9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3A329D10C5F006F54C9 /* Deeplink */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		818CE3A329D10C5F006F54C9 /* Deeplink */ = {
+			isa = PBXGroup;
+			children = (
+				818CE39729D10561006F54C9 /* DeeplinkBuilderTests.swift */,
+				818CE39E29D10985006F54C9 /* WikipediaDeeplinkBuilderTests.swift */,
+				818CE3A029D10B64006F54C9 /* WikipediaPlacesDeeplinkBuilderTests.swift */,
+			);
+			path = Deeplink;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -326,6 +370,24 @@
 			productReference = 818CE33029D09652006F54C9 /* ABNAmroChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		818CE39429D10560006F54C9 /* ABNAmroChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 818CE39B29D10561006F54C9 /* Build configuration list for PBXNativeTarget "ABNAmroChallengeTests" */;
+			buildPhases = (
+				818CE39129D10560006F54C9 /* Sources */,
+				818CE39229D10560006F54C9 /* Frameworks */,
+				818CE39329D10560006F54C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				818CE39A29D10561006F54C9 /* PBXTargetDependency */,
+			);
+			name = ABNAmroChallengeTests;
+			productName = ABNAmroChallengeTests;
+			productReference = 818CE39529D10560006F54C9 /* ABNAmroChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -338,6 +400,10 @@
 				TargetAttributes = {
 					818CE32F29D09652006F54C9 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					818CE39429D10560006F54C9 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 818CE32F29D09652006F54C9;
 					};
 				};
 			};
@@ -358,6 +424,7 @@
 			projectRoot = "";
 			targets = (
 				818CE32F29D09652006F54C9 /* ABNAmroChallenge */,
+				818CE39429D10560006F54C9 /* ABNAmroChallengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -370,6 +437,13 @@
 				818CE34029D09653006F54C9 /* LaunchScreen.storyboard in Resources */,
 				818CE36229D0B305006F54C9 /* Localizable.strings in Resources */,
 				818CE33D29D09653006F54C9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		818CE39329D10560006F54C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +482,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		818CE39129D10560006F54C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818CE39F29D10985006F54C9 /* WikipediaDeeplinkBuilderTests.swift in Sources */,
+				818CE3A129D10B64006F54C9 /* WikipediaPlacesDeeplinkBuilderTests.swift in Sources */,
+				818CE39829D10561006F54C9 /* DeeplinkBuilderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		818CE39A29D10561006F54C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 818CE32F29D09652006F54C9 /* ABNAmroChallenge */;
+			targetProxy = 818CE39929D10561006F54C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		818CE33E29D09653006F54C9 /* LaunchScreen.storyboard */ = {
@@ -590,6 +682,42 @@
 			};
 			name = Release;
 		};
+		818CE39C29D10561006F54C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KTXN9SX9MX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = angsti.ABNAmroChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ABNAmroChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ABNAmroChallenge";
+			};
+			name = Debug;
+		};
+		818CE39D29D10561006F54C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KTXN9SX9MX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = angsti.ABNAmroChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ABNAmroChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ABNAmroChallenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,6 +735,15 @@
 			buildConfigurations = (
 				818CE34529D09653006F54C9 /* Debug */,
 				818CE34629D09653006F54C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		818CE39B29D10561006F54C9 /* Build configuration list for PBXNativeTarget "ABNAmroChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				818CE39C29D10561006F54C9 /* Debug */,
+				818CE39D29D10561006F54C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
