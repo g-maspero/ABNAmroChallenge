@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol DeeplinkBuilderProtocol {
-    func build() -> URL?
-    func clean()
-}
-
-protocol WikipediaDeeplinkBuilderProtocol: DeeplinkBuilderProtocol {
+protocol WikipediaDeeplinkBuilderProtocol: BaseDeeplinkBuilderProtocol {
     func with(page: WikipediaPage) -> Self
     func with(queryParamKey: String, queryParamValue: String) -> Self
 }
@@ -28,10 +23,14 @@ enum WikipediaPage {
 }
 
 class WikipediaDeeplinkBuilder: WikipediaDeeplinkBuilderProtocol {
-    private let wikipediaBaseUrl = "wikipedia://"
-    
+    private let wikipediaScheme = "wikipedia"
     private var page: WikipediaPage = .places
-    private var queryParams: [String: String] = [:]
+    
+    private let deeplinkBuilder: DeeplinkBuilderProtocol
+    
+    init(deeplinkBuilder: DeeplinkBuilderProtocol) {
+        self.deeplinkBuilder = deeplinkBuilder
+    }
     
     func with(page: WikipediaPage) -> Self {
         self.page = page
@@ -39,29 +38,19 @@ class WikipediaDeeplinkBuilder: WikipediaDeeplinkBuilderProtocol {
     }
     
     func with(queryParamKey: String, queryParamValue: String) -> Self {
-        queryParams[queryParamKey] = queryParamValue
+        deeplinkBuilder.with(queryParamKey: queryParamKey, queryParamValue: queryParamValue)
         return self
     }
     
     func build() -> URL? {
         defer { clean() }
         
-        let urlString = "\(wikipediaBaseUrl)\(page.urlHost)?\(queryString)"
-        
-        return URL(string: urlString)
+        return deeplinkBuilder.with(scheme: wikipediaScheme)
+                              .with(host: page.urlHost)
+                              .build()
     }
     
     func clean() {
-        queryParams = [:]
-    }
-    
-    private var queryString: String {
-        guard !queryParams.isEmpty else { return "" }
-        
-        let queryItems = queryParams.map { key, value in
-            return "\(key)=\(value)"
-        }
-        
-        return queryItems.joined(separator: "&")
+        deeplinkBuilder.clean()
     }
 }

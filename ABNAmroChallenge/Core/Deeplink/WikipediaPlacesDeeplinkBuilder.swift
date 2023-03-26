@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol WikipediaPlacesDeeplinkBuilderProtocol: DeeplinkBuilderProtocol {
+protocol WikipediaPlacesDeeplinkBuilderProtocol: BaseDeeplinkBuilderProtocol {
     func with(latitude: Double) -> Self
     func with(longitude: Double) -> Self
 }
@@ -47,5 +47,6 @@ class WikipediaPlacesDeeplinkBuilder: WikipediaPlacesDeeplinkBuilderProtocol {
     func clean() {
         latitude = nil
         longitude = nil
+        wikipediaDeeplinkBuilder.clean()
     }
 }

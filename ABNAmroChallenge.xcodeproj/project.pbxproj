@@ -35,6 +35,7 @@
 		818CE37629D0DC66006F54C9 /* CustomLocationSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE37529D0DC66006F54C9 /* CustomLocationSelectorView.swift */; };
 		818CE37829D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE37729D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift */; };
 		818CE37A29D0F729006F54C9 /* CoreWording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE37929D0F729006F54C9 /* CoreWording.swift */; };
+		818CE38D29D0FB99006F54C9 /* DeeplinkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE38C29D0FB99006F54C9 /* DeeplinkBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		818CE37529D0DC66006F54C9 /* CustomLocationSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationSelectorView.swift; sourceTree = "<group>"; };
 		818CE37729D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationSelectorViewModel.swift; sourceTree = "<group>"; };
 		818CE37929D0F729006F54C9 /* CoreWording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreWording.swift; sourceTree = "<group>"; };
+		818CE38C29D0FB99006F54C9 /* DeeplinkBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 			isa = PBXGroup;
 			children = (
 				818CE33329D09652006F54C9 /* AppDelegate.swift */,
-				818CE34729D0A70B006F54C9 /* UserFlows */,
-				818CE33C29D09653006F54C9 /* Assets.xcassets */,
 				818CE33E29D09653006F54C9 /* LaunchScreen.storyboard */,
 				818CE36129D0B305006F54C9 /* Localizable.strings */,
+				818CE33C29D09653006F54C9 /* Assets.xcassets */,
 				818CE34129D09653006F54C9 /* Info.plist */,
+				818CE38129D0F8D6006F54C9 /* Core */,
+				818CE34729D0A70B006F54C9 /* UserFlows */,
 			);
 			path = ABNAmroChallenge;
 			sourceTree = "<group>";
@@ -113,31 +116,191 @@
 		818CE34729D0A70B006F54C9 /* UserFlows */ = {
 			isa = PBXGroup;
 			children = (
+				818CE37B29D0F865006F54C9 /* Home */,
+			);
+			path = UserFlows;
+			sourceTree = "<group>";
+		};
+		818CE37B29D0F865006F54C9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
 				818CE34829D0A71C006F54C9 /* HomeModule.swift */,
-				818CE36D29D0B7AF006F54C9 /* BaseRouter.swift */,
-				818CE34A29D0A74F006F54C9 /* HomeRouter.swift */,
-				818CE37129D0C942006F54C9 /* WikipediaDeeplinkBuilder.swift */,
-				818CE37329D0CAF9006F54C9 /* WikipediaPlacesDeeplinkBuilder.swift */,
+				818CE37C29D0F870006F54C9 /* ViewController */,
+				818CE38F29D0FD89006F54C9 /* ViewModel */,
+				818CE37E29D0F87C006F54C9 /* Interactor */,
+				818CE37D29D0F878006F54C9 /* Presenter */,
+				818CE37F29D0F87F006F54C9 /* Router */,
+				818CE39029D0FD95006F54C9 /* Repository */,
+				818CE38629D0F921006F54C9 /* Mappers */,
+				818CE38029D0F8BD006F54C9 /* Wording */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		818CE37C29D0F870006F54C9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
 				818CE34C29D0A758006F54C9 /* HomeViewController.swift */,
+				818CE38529D0F8FE006F54C9 /* Views */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		818CE37D29D0F878006F54C9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				818CE35029D0A769006F54C9 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		818CE37E29D0F87C006F54C9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				818CE34E29D0A760006F54C9 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		818CE37F29D0F87F006F54C9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				818CE34A29D0A74F006F54C9 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		818CE38029D0F8BD006F54C9 /* Wording */ = {
+			isa = PBXGroup;
+			children = (
+				818CE36329D0B32B006F54C9 /* HomeWording.swift */,
+			);
+			path = Wording;
+			sourceTree = "<group>";
+		};
+		818CE38129D0F8D6006F54C9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				818CE38E29D0FD7A006F54C9 /* Wording */,
+				818CE38B29D0F980006F54C9 /* Deeplink */,
+				818CE38A29D0F962006F54C9 /* New Group */,
+				818CE38929D0F955006F54C9 /* Router */,
+				818CE38829D0F949006F54C9 /* Error */,
+				818CE38729D0F93F006F54C9 /* Network */,
+				818CE38429D0F8EC006F54C9 /* ViewController */,
+				818CE38329D0F8E5006F54C9 /* Views */,
+				818CE38229D0F8D8006F54C9 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		818CE38229D0F8D8006F54C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				818CE36B29D0B6BC006F54C9 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		818CE38329D0F8E5006F54C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				818CE36929D0B693006F54C9 /* ActivityIndicator.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		818CE38429D0F8EC006F54C9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				818CE36729D0B5B3006F54C9 /* BaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		818CE38529D0F8FE006F54C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				818CE36F29D0BA03006F54C9 /* LocationCell.swift */,
 				818CE37529D0DC66006F54C9 /* CustomLocationSelectorView.swift */,
 				818CE37729D0EB1C006F54C9 /* CustomLocationSelectorViewModel.swift */,
-				818CE36F29D0BA03006F54C9 /* LocationCell.swift */,
-				818CE36729D0B5B3006F54C9 /* BaseViewController.swift */,
-				818CE36B29D0B6BC006F54C9 /* UIViewExtension.swift */,
-				818CE36929D0B693006F54C9 /* ActivityIndicator.swift */,
-				818CE34E29D0A760006F54C9 /* HomeInteractor.swift */,
-				818CE35029D0A769006F54C9 /* HomePresenter.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		818CE38629D0F921006F54C9 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
 				818CE36529D0B3D8006F54C9 /* LocationsViewMapper.swift */,
-				818CE35F29D0B0B2006F54C9 /* ErrorType.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		818CE38729D0F93F006F54C9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
 				818CE35629D0AC50006F54C9 /* RestClient.swift */,
 				818CE35829D0AC82006F54C9 /* HTTPManager.swift */,
-				818CE36329D0B32B006F54C9 /* HomeWording.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		818CE38829D0F949006F54C9 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				818CE35F29D0B0B2006F54C9 /* ErrorType.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		818CE38929D0F955006F54C9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				818CE36D29D0B7AF006F54C9 /* BaseRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		818CE38A29D0F962006F54C9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		818CE38B29D0F980006F54C9 /* Deeplink */ = {
+			isa = PBXGroup;
+			children = (
+				818CE38C29D0FB99006F54C9 /* DeeplinkBuilder.swift */,
+				818CE37129D0C942006F54C9 /* WikipediaDeeplinkBuilder.swift */,
+				818CE37329D0CAF9006F54C9 /* WikipediaPlacesDeeplinkBuilder.swift */,
+			);
+			path = Deeplink;
+			sourceTree = "<group>";
+		};
+		818CE38E29D0FD7A006F54C9 /* Wording */ = {
+			isa = PBXGroup;
+			children = (
 				818CE37929D0F729006F54C9 /* CoreWording.swift */,
+			);
+			path = Wording;
+			sourceTree = "<group>";
+		};
+		818CE38F29D0FD89006F54C9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 				818CE35429D0AC00006F54C9 /* LocationsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		818CE39029D0FD95006F54C9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
 				818CE35229D0AA66006F54C9 /* LocationRepository.swift */,
 				818CE35D29D0B07C006F54C9 /* LocationsDTO.swift */,
 			);
-			path = UserFlows;
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +403,7 @@
 				818CE33429D09652006F54C9 /* AppDelegate.swift in Sources */,
 				818CE36829D0B5B3006F54C9 /* BaseViewController.swift in Sources */,
 				818CE36A29D0B693006F54C9 /* ActivityIndicator.swift in Sources */,
+				818CE38D29D0FB99006F54C9 /* DeeplinkBuilder.swift in Sources */,
 				818CE37A29D0F729006F54C9 /* CoreWording.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
