@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ABNAmroChallenge
+
+  Created by angst on 26/03/2023.
+  
+*/
+
+"unknown_location_name" = "Unknown place";
+"home_title" = "Locations";
+"latitude" = "Latitude";
+"longitude" = "Longitude";
