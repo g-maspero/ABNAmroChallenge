@@ -8,18 +8,55 @@
 
 /* Begin PBXBuildFile section */
 		818CE33429D09652006F54C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE33329D09652006F54C9 /* AppDelegate.swift */; };
-		818CE33829D09652006F54C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE33729D09652006F54C9 /* ViewController.swift */; };
 		818CE33D29D09653006F54C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818CE33C29D09653006F54C9 /* Assets.xcassets */; };
 		818CE34029D09653006F54C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818CE33E29D09653006F54C9 /* LaunchScreen.storyboard */; };
+		818CE34929D0A71C006F54C9 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE34829D0A71C006F54C9 /* HomeModule.swift */; };
+		818CE34B29D0A74F006F54C9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE34A29D0A74F006F54C9 /* HomeRouter.swift */; };
+		818CE34D29D0A758006F54C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE34C29D0A758006F54C9 /* HomeViewController.swift */; };
+		818CE34F29D0A760006F54C9 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE34E29D0A760006F54C9 /* HomeInteractor.swift */; };
+		818CE35129D0A769006F54C9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE35029D0A769006F54C9 /* HomePresenter.swift */; };
+		818CE35329D0AA66006F54C9 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE35229D0AA66006F54C9 /* LocationRepository.swift */; };
+		818CE35529D0AC00006F54C9 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE35429D0AC00006F54C9 /* LocationsViewModel.swift */; };
+		818CE35729D0AC50006F54C9 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE35629D0AC50006F54C9 /* RestClient.swift */; };
+		818CE35929D0AC82006F54C9 /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE35829D0AC82006F54C9 /* HTTPManager.swift */; };
+		818CE35C29D0ADF8006F54C9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 818CE35B29D0ADF8006F54C9 /* Alamofire */; };
+		818CE35E29D0B07C006F54C9 /* LocationsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE35D29D0B07C006F54C9 /* LocationsDTO.swift */; };
+		818CE36029D0B0B2006F54C9 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE35F29D0B0B2006F54C9 /* ErrorType.swift */; };
+		818CE36229D0B305006F54C9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 818CE36129D0B305006F54C9 /* Localizable.strings */; };
+		818CE36429D0B32B006F54C9 /* HomeWording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE36329D0B32B006F54C9 /* HomeWording.swift */; };
+		818CE36629D0B3D8006F54C9 /* LocationsViewMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE36529D0B3D8006F54C9 /* LocationsViewMapper.swift */; };
+		818CE36829D0B5B3006F54C9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE36729D0B5B3006F54C9 /* BaseView.swift */; };
+		818CE36A29D0B693006F54C9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE36929D0B693006F54C9 /* ActivityIndicator.swift */; };
+		818CE36C29D0B6BC006F54C9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE36B29D0B6BC006F54C9 /* UIViewExtension.swift */; };
+		818CE36E29D0B7AF006F54C9 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE36D29D0B7AF006F54C9 /* BaseRouter.swift */; };
+		818CE37029D0BA03006F54C9 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE36F29D0BA03006F54C9 /* LocationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		818CE33029D09652006F54C9 /* ABNAmroChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABNAmroChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		818CE33329D09652006F54C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		818CE33729D09652006F54C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		818CE33C29D09653006F54C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		818CE33F29D09653006F54C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		818CE34129D09653006F54C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		818CE34829D0A71C006F54C9 /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		818CE34A29D0A74F006F54C9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		818CE34C29D0A758006F54C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		818CE34E29D0A760006F54C9 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		818CE35029D0A769006F54C9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		818CE35229D0AA66006F54C9 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		818CE35429D0AC00006F54C9 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		818CE35629D0AC50006F54C9 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		818CE35829D0AC82006F54C9 /* HTTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		818CE35D29D0B07C006F54C9 /* LocationsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDTO.swift; sourceTree = "<group>"; };
+		818CE35F29D0B0B2006F54C9 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		818CE36129D0B305006F54C9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		818CE36329D0B32B006F54C9 /* HomeWording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWording.swift; sourceTree = "<group>"; };
+		818CE36529D0B3D8006F54C9 /* LocationsViewMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewMapper.swift; sourceTree = "<group>"; };
+		818CE36729D0B5B3006F54C9 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		818CE36929D0B693006F54C9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		818CE36B29D0B6BC006F54C9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		818CE36D29D0B7AF006F54C9 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		818CE36F29D0BA03006F54C9 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818CE35C29D0ADF8006F54C9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,12 +91,38 @@
 			isa = PBXGroup;
 			children = (
 				818CE33329D09652006F54C9 /* AppDelegate.swift */,
-				818CE33729D09652006F54C9 /* ViewController.swift */,
+				818CE34729D0A70B006F54C9 /* UserFlows */,
 				818CE33C29D09653006F54C9 /* Assets.xcassets */,
 				818CE33E29D09653006F54C9 /* LaunchScreen.storyboard */,
+				818CE36129D0B305006F54C9 /* Localizable.strings */,
 				818CE34129D09653006F54C9 /* Info.plist */,
 			);
 			path = ABNAmroChallenge;
+			sourceTree = "<group>";
+		};
+		818CE34729D0A70B006F54C9 /* UserFlows */ = {
+			isa = PBXGroup;
+			children = (
+				818CE34829D0A71C006F54C9 /* HomeModule.swift */,
+				818CE36D29D0B7AF006F54C9 /* BaseRouter.swift */,
+				818CE34A29D0A74F006F54C9 /* HomeRouter.swift */,
+				818CE34C29D0A758006F54C9 /* HomeViewController.swift */,
+				818CE36F29D0BA03006F54C9 /* LocationCell.swift */,
+				818CE36729D0B5B3006F54C9 /* BaseView.swift */,
+				818CE36B29D0B6BC006F54C9 /* UIViewExtension.swift */,
+				818CE36929D0B693006F54C9 /* ActivityIndicator.swift */,
+				818CE34E29D0A760006F54C9 /* HomeInteractor.swift */,
+				818CE35029D0A769006F54C9 /* HomePresenter.swift */,
+				818CE36529D0B3D8006F54C9 /* LocationsViewMapper.swift */,
+				818CE35F29D0B0B2006F54C9 /* ErrorType.swift */,
+				818CE35629D0AC50006F54C9 /* RestClient.swift */,
+				818CE35829D0AC82006F54C9 /* HTTPManager.swift */,
+				818CE36329D0B32B006F54C9 /* HomeWording.swift */,
+				818CE35429D0AC00006F54C9 /* LocationsViewModel.swift */,
+				818CE35229D0AA66006F54C9 /* LocationRepository.swift */,
+				818CE35D29D0B07C006F54C9 /* LocationsDTO.swift */,
+			);
+			path = UserFlows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +141,9 @@
 			dependencies = (
 			);
 			name = ABNAmroChallenge;
+			packageProductDependencies = (
+				818CE35B29D0ADF8006F54C9 /* Alamofire */,
+			);
 			productName = ABNAmroChallenge;
 			productReference = 818CE33029D09652006F54C9 /* ABNAmroChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -105,6 +172,9 @@
 				Base,
 			);
 			mainGroup = 818CE32729D09652006F54C9;
+			packageReferences = (
+				818CE35A29D0ADF8006F54C9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 818CE33129D09652006F54C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				818CE34029D09653006F54C9 /* LaunchScreen.storyboard in Resources */,
+				818CE36229D0B305006F54C9 /* Localizable.strings in Resources */,
 				818CE33D29D09653006F54C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,8 +202,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				818CE33829D09652006F54C9 /* ViewController.swift in Sources */,
+				818CE35E29D0B07C006F54C9 /* LocationsDTO.swift in Sources */,
+				818CE36029D0B0B2006F54C9 /* ErrorType.swift in Sources */,
+				818CE35129D0A769006F54C9 /* HomePresenter.swift in Sources */,
+				818CE36429D0B32B006F54C9 /* HomeWording.swift in Sources */,
+				818CE34D29D0A758006F54C9 /* HomeViewController.swift in Sources */,
+				818CE34929D0A71C006F54C9 /* HomeModule.swift in Sources */,
+				818CE36C29D0B6BC006F54C9 /* UIViewExtension.swift in Sources */,
+				818CE34B29D0A74F006F54C9 /* HomeRouter.swift in Sources */,
+				818CE35329D0AA66006F54C9 /* LocationRepository.swift in Sources */,
+				818CE34F29D0A760006F54C9 /* HomeInteractor.swift in Sources */,
+				818CE35529D0AC00006F54C9 /* LocationsViewModel.swift in Sources */,
+				818CE36629D0B3D8006F54C9 /* LocationsViewMapper.swift in Sources */,
+				818CE36E29D0B7AF006F54C9 /* BaseRouter.swift in Sources */,
+				818CE35929D0AC82006F54C9 /* HTTPManager.swift in Sources */,
+				818CE35729D0AC50006F54C9 /* RestClient.swift in Sources */,
+				818CE37029D0BA03006F54C9 /* LocationCell.swift in Sources */,
 				818CE33429D09652006F54C9 /* AppDelegate.swift in Sources */,
+				818CE36829D0B5B3006F54C9 /* BaseView.swift in Sources */,
+				818CE36A29D0B693006F54C9 /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		818CE35A29D0ADF8006F54C9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		818CE35B29D0ADF8006F54C9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 818CE35A29D0ADF8006F54C9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 818CE32829D09652006F54C9 /* Project object */;
 }
