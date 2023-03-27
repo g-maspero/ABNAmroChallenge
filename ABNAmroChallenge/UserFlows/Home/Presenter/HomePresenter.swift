@@ -60,6 +60,13 @@ class HomePresenter {
             }
         }
     }
+    
+    private func openWikipediaFor(latitude: Double, longitude: Double) {
+        let deeplinkSuccessfullyOpened = router.openWikipediaAppFor(latitude: latitude, longitude: longitude)
+        if !deeplinkSuccessfullyOpened {
+            view?.presentOKAlert(title: CoreWording.GenericErrorTitle, message: CoreWording.OpenDeeplinkError)
+        }
+    }
 }
 
 extension HomePresenter: HomePresenterProtocol {
@@ -67,7 +74,7 @@ extension HomePresenter: HomePresenterProtocol {
         guard let locationsViewModel = locationsViewModel else { return }
         
         let location = locationsViewModel.locations[indexPath.row]
-        router.openWikipediaAppFor(latitude: location.latitude, longitude: location.longitude)
+        openWikipediaFor(latitude: location.latitude, longitude: location.longitude)
     }
     
     func takeMeThereButtonWasTapped(latitude: Double?, longitude: Double?) {
@@ -76,7 +83,6 @@ extension HomePresenter: HomePresenterProtocol {
                                  message: HomeWording.CoordinatesErrorTitle)
             return
         }
-        
-        router.openWikipediaAppFor(latitude: latitude, longitude: longitude)
+        openWikipediaFor(latitude: latitude, longitude: longitude)
     }
 }

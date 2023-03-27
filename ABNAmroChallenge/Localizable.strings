@@ -10,6 +10,7 @@
 "core_ok" = "Ok";
 "core_oops" = "Oops";
 "core_generic_error_title" = "Oops, something went wrong!";
+"core_open_deeplink_error" = "Deeplink couldn't be opened";
 
 //Home
 "home_unknown_location_name" = "Unknown place";

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeRouterProtocol: BaseRouterProtocol {
-    func openWikipediaAppFor(latitude: Double, longitude: Double)
+    func openWikipediaAppFor(latitude: Double, longitude: Double) -> Bool
 }
 
 class HomeRouter: BaseRouter, HomeRouterProtocol {
@@ -18,16 +18,15 @@ class HomeRouter: BaseRouter, HomeRouterProtocol {
         self.wikipediaPlacesDeeplinkBuilder = wikipediaPlacesDeeplinkBuilder
     }
     
-    func openWikipediaAppFor(latitude: Double, longitude: Double) {
+    func openWikipediaAppFor(latitude: Double, longitude: Double) -> Bool {
         guard let deeplink = wikipediaPlacesDeeplinkBuilder.with(latitude: latitude)
                                                            .with(longitude: longitude)
-                                                           .build() else {
-            print("Could not open deeplink")
-            return
+                                                           .build(),
+              UIApplication.shared.canOpenURL(deeplink) else {
+            return false
         }
         
-        if UIApplication.shared.canOpenURL(deeplink) {
-            UIApplication.shared.open(deeplink, options: [:], completionHandler: nil)
-        }
+        UIApplication.shared.open(deeplink, options: [:], completionHandler: nil)
+        return true
     }
 }

@@ -43,6 +43,16 @@
 		818CE3A729D10D3D006F54C9 /* RestClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3A629D10D3D006F54C9 /* RestClientTests.swift */; };
 		818CE3A929D10D69006F54C9 /* HTTPManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3A829D10D69006F54C9 /* HTTPManagerMock.swift */; };
 		818CE3AD29D10DF5006F54C9 /* BaseRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3AC29D10DF5006F54C9 /* BaseRouterTests.swift */; };
+		818CE3B329D11284006F54C9 /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3B229D11284006F54C9 /* UIViewExtensionTests.swift */; };
+		818CE3BA29D113F7006F54C9 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3B929D113F7006F54C9 /* HomeViewControllerTests.swift */; };
+		818CE3BD29D11499006F54C9 /* HomePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3BC29D11499006F54C9 /* HomePresenterMock.swift */; };
+		818CE3C229D11A56006F54C9 /* HomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3C129D11A56006F54C9 /* HomeRouterTests.swift */; };
+		818CE3C429D12466006F54C9 /* WikipediaPlacesDeeplinkBuilderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3C329D12466006F54C9 /* WikipediaPlacesDeeplinkBuilderMock.swift */; };
+		818CE3C629D1260D006F54C9 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3C529D1260D006F54C9 /* HomePresenterTests.swift */; };
+		818CE3C829D128F3006F54C9 /* HomeInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3C729D128F3006F54C9 /* HomeInteractorMock.swift */; };
+		818CE3CA29D12917006F54C9 /* HomeRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3C929D12917006F54C9 /* HomeRouterMock.swift */; };
+		818CE3CC29D12930006F54C9 /* HomeViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3CB29D12930006F54C9 /* HomeViewMock.swift */; };
+		818CE3CE29D12CD2006F54C9 /* LocationsViewMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CE3CD29D12CD2006F54C9 /* LocationsViewMapperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +104,16 @@
 		818CE3A629D10D3D006F54C9 /* RestClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClientTests.swift; sourceTree = "<group>"; };
 		818CE3A829D10D69006F54C9 /* HTTPManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManagerMock.swift; sourceTree = "<group>"; };
 		818CE3AC29D10DF5006F54C9 /* BaseRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouterTests.swift; sourceTree = "<group>"; };
+		818CE3B229D11284006F54C9 /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTests.swift; sourceTree = "<group>"; };
+		818CE3B929D113F7006F54C9 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		818CE3BC29D11499006F54C9 /* HomePresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterMock.swift; sourceTree = "<group>"; };
+		818CE3C129D11A56006F54C9 /* HomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterTests.swift; sourceTree = "<group>"; };
+		818CE3C329D12466006F54C9 /* WikipediaPlacesDeeplinkBuilderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPlacesDeeplinkBuilderMock.swift; sourceTree = "<group>"; };
+		818CE3C529D1260D006F54C9 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		818CE3C729D128F3006F54C9 /* HomeInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorMock.swift; sourceTree = "<group>"; };
+		818CE3C929D12917006F54C9 /* HomeRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterMock.swift; sourceTree = "<group>"; };
+		818CE3CB29D12930006F54C9 /* HomeViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewMock.swift; sourceTree = "<group>"; };
+		818CE3CD29D12CD2006F54C9 /* LocationsViewMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewMapperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				818CE3A229D10C5C006F54C9 /* Core */,
+				818CE3B629D113D6006F54C9 /* UserFlows */,
 			);
 			path = ABNAmroChallengeTests;
 			sourceTree = "<group>";
@@ -344,6 +365,7 @@
 				818CE3A329D10C5F006F54C9 /* Deeplink */,
 				818CE3AB29D10D80006F54C9 /* Network */,
 				818CE3AE29D10E0E006F54C9 /* Router */,
+				818CE3AF29D10E7A006F54C9 /* UIViewExtension */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -381,6 +403,78 @@
 				818CE3AC29D10DF5006F54C9 /* BaseRouterTests.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		818CE3AF29D10E7A006F54C9 /* UIViewExtension */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3B229D11284006F54C9 /* UIViewExtensionTests.swift */,
+			);
+			path = UIViewExtension;
+			sourceTree = "<group>";
+		};
+		818CE3B629D113D6006F54C9 /* UserFlows */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3B729D113DB006F54C9 /* Home */,
+			);
+			path = UserFlows;
+			sourceTree = "<group>";
+		};
+		818CE3B729D113DB006F54C9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3BB29D1148F006F54C9 /* Mocks */,
+				818CE3B829D113E6006F54C9 /* ViewController */,
+				818CE3BF29D11976006F54C9 /* Presenter */,
+				818CE3BE29D11952006F54C9 /* Router */,
+				818CE3C029D1197A006F54C9 /* ViewMapper */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		818CE3B829D113E6006F54C9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3B929D113F7006F54C9 /* HomeViewControllerTests.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		818CE3BB29D1148F006F54C9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3CB29D12930006F54C9 /* HomeViewMock.swift */,
+				818CE3C729D128F3006F54C9 /* HomeInteractorMock.swift */,
+				818CE3BC29D11499006F54C9 /* HomePresenterMock.swift */,
+				818CE3C929D12917006F54C9 /* HomeRouterMock.swift */,
+				818CE3C329D12466006F54C9 /* WikipediaPlacesDeeplinkBuilderMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		818CE3BE29D11952006F54C9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3C129D11A56006F54C9 /* HomeRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		818CE3BF29D11976006F54C9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3C529D1260D006F54C9 /* HomePresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		818CE3C029D1197A006F54C9 /* ViewMapper */ = {
+			isa = PBXGroup;
+			children = (
+				818CE3CD29D12CD2006F54C9 /* LocationsViewMapperTests.swift */,
+			);
+			path = ViewMapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,12 +616,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818CE3C629D1260D006F54C9 /* HomePresenterTests.swift in Sources */,
+				818CE3C829D128F3006F54C9 /* HomeInteractorMock.swift in Sources */,
 				818CE3A729D10D3D006F54C9 /* RestClientTests.swift in Sources */,
+				818CE3BD29D11499006F54C9 /* HomePresenterMock.swift in Sources */,
+				818CE3C229D11A56006F54C9 /* HomeRouterTests.swift in Sources */,
+				818CE3C429D12466006F54C9 /* WikipediaPlacesDeeplinkBuilderMock.swift in Sources */,
+				818CE3BA29D113F7006F54C9 /* HomeViewControllerTests.swift in Sources */,
 				818CE39F29D10985006F54C9 /* WikipediaDeeplinkBuilderTests.swift in Sources */,
 				818CE3AD29D10DF5006F54C9 /* BaseRouterTests.swift in Sources */,
 				818CE3A129D10B64006F54C9 /* WikipediaPlacesDeeplinkBuilderTests.swift in Sources */,
 				818CE3A929D10D69006F54C9 /* HTTPManagerMock.swift in Sources */,
+				818CE3CC29D12930006F54C9 /* HomeViewMock.swift in Sources */,
 				818CE3A529D10CA7006F54C9 /* WikipediaPageTests.swift in Sources */,
+				818CE3B329D11284006F54C9 /* UIViewExtensionTests.swift in Sources */,
+				818CE3CE29D12CD2006F54C9 /* LocationsViewMapperTests.swift in Sources */,
+				818CE3CA29D12917006F54C9 /* HomeRouterMock.swift in Sources */,
 				818CE39829D10561006F54C9 /* DeeplinkBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
