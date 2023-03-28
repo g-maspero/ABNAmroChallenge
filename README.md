@@ -38,7 +38,7 @@ I'm not a fan of how the `LocationManager` is interacting with the `PlacesViewCo
 ## How to run it
 
 Last but not least, here is how to run everything!
-1. Open the modified Wikipedia app, and do `git checkout abnAmroChallengeSolution`.
+1. Open the modified [Wikipedia app](https://github.com/g-maspero/ABNAmro-Wikipedia-iOS/tree/abnAmroChallengeSolution), and do `git checkout abnAmroChallengeSolution`.
 2. Run the modified Wikipedia app (instructions can be found in the [Wikipedia iOS Repo](https://github.com/wikimedia/wikipedia-ios#building-and-running)) in a simulator.
 3. Open and run the test app in the same simulator (all commits are on branch main, so no need to git checkout anything in particular).
 4. Tap on any of the fetched locations, and the modified Wikipedia app will launch on that place.
